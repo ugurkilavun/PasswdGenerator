@@ -1,0 +1,794 @@
+/* Theme Settings*/
+:root {
+  --body-background-color: #f1f6fa;
+  --background-color: #ffffff;
+  --text-color: #333;
+  --general-shadow: 0 0 5px #bebebe73, 0 4px 8px #bebebe73, 0 8px 12px #bebebe73;
+  --github-shadow: 0 0 2px #bebebe73, 0 0px 8px #bebebe73, 0 8px 12px #bebebe73;
+  --content-shadows: 0px 0px 3px 0px #cadae2;
+  --passwd-shadow: 0px 0px 5px 0px #cadae2;
+  --button-incAndDec-background: #ffffff;
+  --buton-incAndDec-border: 1px solid #a7a7a7;
+  --githubsvgIcon: #1f1f1f;
+}
+
+.dark-theme {
+  --body-background-color: #1d1b1b;
+  --background-color: #26262b;
+  --text-color: #f1f6fa;
+  --general-shadow: 0 0 5px #2b292973, 0 4px 8px #2b292973, 0 8px 12px #2b292973;
+  --github-shadow: 0 0 2px #2b292973, 0 0px 8px #2b292973, 0 8px 12px #2b292973;
+  --content-shadows: 0px 0px 3px 0px #5a575773;
+  --passwd-shadow: 0px 0px 5px 0px #5a575773;
+  --button-incAndDec-background: #3f3f3f;
+  --buton-incAndDec-border: 1px solid #3b3b3b73;
+  --githubsvgIcon: #e6e6e6;
+}
+
+/* General Styles */
+body {
+  background-color: var(--body-background-color);/* 1. f1fafa, 2. f1f6fa, 3.#e8e8e8 */
+  color: var(--text-color); /* #333;*/
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+input[type="range"] {
+  accent-color: #33dddd; /* 707070, 5ac47d */
+}
+
+/* Styles */
+.generalContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.header, .body, .bottom {
+  text-align: center;
+  margin: 0px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  background-color: #fff;
+  height: 40px;
+  width: auto;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #bebebe73, 0 0px 8px #bebebe73, 0 8px 12px #bebebe73;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.headerItems {
+  display: flex;
+  background-color: #ffffff;
+  margin: 0px 5px 0px 5px;
+}
+
+
+
+/* Body */
+.bodyWrapper  {
+  display: flex;
+  flex-direction: row;
+}
+
+.body {
+  background-color: var(--background-color);
+  width: auto; /* Default: 444px*/
+  height: auto;
+  padding: 0px 30px;
+  border-radius: 8px;
+  box-shadow: var(--general-shadow);
+}
+
+.passwdGenWrapper {
+  background-color: var(--background-color);
+  margin-bottom: 25px;
+  /* width: 100vh; */
+  width: auto;
+  height: auto;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column; 
+  justify-content: center;
+  /* justify-content: space-between; */ 
+}
+
+.passwdTSIWrapper {
+  background-color: none;
+  margin-bottom: 25px;
+  /* width: 100vh; */
+  width: 80%;
+  height: auto;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  /* justify-content: space-between; */ 
+}
+
+.passwdGenGeneralWrapperCentered {
+  background-color: none; 
+  width: auto;
+  height: auto;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+}
+
+.passwdGenGeneralWrapperLeftAligned {
+  background-color: none; 
+  display: flex;
+  margin-left: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.passwdGenBordered {
+  background-color: var(--background-color); 
+  display: flex;
+  color: none;
+  /* border: 1px solid #dadada; */
+  box-shadow: var(--passwd-shadow);
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  align-items: center;
+  z-index: 0;
+}
+
+.passwdGenBordered:hover {
+  cursor: url("../images/cursor/cursor.png"), auto; /*7,*/
+}
+
+
+.passwdGenObjectTitles {
+  font-size: 16px;
+}
+
+.passwdGenContentWrapper {
+  width: 300px; 
+  background-color: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passwdGenContentTitles {
+  width: auto;
+  display: flex;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.passwdGenContents {
+  background-color: none; /* f3f3f3 */
+  width: 300px;
+  margin: 0px 5px 8px 5px;
+  padding: 8px 10px 8px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: var(--content-shadows);
+}
+
+.passwdGenContentsCentered {
+  background-color: none; /* f3f3f3 */
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  border-radius: 6px;
+  justify-content: center;
+  box-shadow: var(--content-shadows);
+}
+
+#passwdGenTextInput {
+  border: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  height: 40px;
+  width: 350px;
+  z-index: -5;
+  padding: 0px 5px;
+  justify-content: center;
+}
+
+#passwdGenTextInput:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.passwdGenTextSafetyInformation {
+  width: 150px;/* 100%, auto */
+  background-color: #2fce52;
+  color: #1d1d1d;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+.incAndDecButtonStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0; 
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  background-color: var(--button-incAndDec-background); 
+  border: var(--buton-incAndDec-border);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.incAndDecButtonStyles:hover {
+  background-color: var(--button-incAndDec-background); 
+  transform: scale(1.1);
+}
+
+
+/* From Uiverse.io by Galahhad */ 
+.ui-btn {
+  --width: 210px;
+  --btn-default-bg: rgb(63, 63, 63);
+  --btn-padding: 15px 20px;
+  --btn-margin: 0px auto;
+  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-transition: .5s;
+  --btn-letter-spacing: .1rem;
+  --btn-animation-duration: 1.2s; /* 1.2s */
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #FAC921;
+  --default-btn-color: #fff;
+  --border-radius: 8px;
+  --font-size: 15px;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */ 
+}
+
+/* button settings 👆 */
+.ui-btn {
+  width: var(--width);
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  margin: var(--btn-margin);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+  border-radius: var(--border-radius);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background-color: inherit;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover {
+  background: var(--btn-hover-bg);
+  cursor: pointer;
+  transition: 0.4s;
+  transform: scale(1.1);
+}
+
+.ui-btn:hover span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before, .ui-btn:hover span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".#";
+  }
+
+  10% {
+    content: "*@?";
+  }
+
+  15% {
+    content: "%&j'";
+  }
+
+  20% {
+    content: "+^{(~/";
+  }
+
+  25% {
+    content: "?{4@%$+^"; /*End Left == 8, ?{4@%$+^ : Generate   */
+  }
+
+  30% {
+    content: "|%'{-:#";
+  }
+
+  35% {
+    content: ";?/%&@]"; /* Number: 7 */
+  }
+
+  40% {
+    content: "#{.2@%"; /* 6 */
+  }
+
+  45% {
+    content: "=.,^!}"; /* 6 */
+  }
+
+  50% {
+    content: "?2@%6"; /* 5 */
+  }
+
+  55% {
+    content: "?{%:%"; /* 5 */
+  }
+
+  60% {
+    content: "4%0%"; /* 4 */
+    right: 0;
+  }
+
+  65% {
+    content: "'_0<"; /* 4 */
+    right: 0;
+  }
+
+  70% {
+    content: "{0%"; /* 3 */
+    right: 0;
+  }
+
+  75% {
+    content: "]>'"; /* 3 */
+    right: 0;
+  }
+
+  80% {
+    content: "6{"; /* 2 */
+    right: 0;
+  }
+
+  85% {
+    content: "^+"; /* 2 */
+    right: 0;
+  }
+
+  90% {
+    content: "9"; /* 1 */
+    right: 0;
+  }
+
+  95% {
+    content: "."; /* 1 */
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+
+.moreSettingsButtonWrapper {
+  display: flex;
+  background-color: none; 
+  height: auto; 
+  width: auto;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-top: 300px;
+  margin-left: 446px; /* Default: 440px, Opened: 550px */
+}
+
+.moreSettingsButton {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.021);
+  transition: all 0.3s;
+}
+
+.moreSettingsButton svg {
+  height: 16px;
+  fill: rgb(77, 77, 77);
+  transition: all 0.3s;
+}
+.moreSettingsButton:hover {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+  background-color: rgb(59, 59, 59);
+}
+.moreSettingsButton:hover svg {
+  fill: white;
+}
+
+/* More Settings: Modal */
+.bodyModalWrapper{
+  background-color: var(--background-color);
+  display: none;
+  margin-left: 43px; /* -10px */
+  padding: 0px 10px 20px 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 260px;
+  height: 100%;
+  /* z-index: -1; */
+  border-radius: 8px;
+  box-shadow: var(--general-shadow);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.bodyModalWrapperUL{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyModalWrapper.show {
+  display: flex;
+  transform: scale(1);
+}
+
+.moreSettingsModal {
+  background-color: none;
+  width: 200px;
+  margin: 0px 5px 10px 5px;
+  padding: 5px 7px 5px 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: var(--content-shadows);
+}
+
+.moreSettingsModalCentered {
+  display: flex;
+  align-items: center;
+}
+
+/* From Uiverse.io by Sunandh */ 
+/* Tooltip container */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+  
+/* Icon styling */
+.tooltip-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition:
+  transform 0.3s ease,
+  filter 0.3s ease;
+}
+
+.tooltip-icon-color {
+  stroke: none;
+  fill: var(--text-color);
+}
+  
+/* SVG Animation: Rotate and scale effect */
+.tooltip-icon  svg {
+  transition: transform 0.5s ease-in-out;
+}
+  
+.tooltip-icon:hover svg {
+  transform: rotate(360deg) scale(1.2);
+}
+  
+/* Tooltip styling */
+.tooltip {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0px 8px;
+  position: absolute;
+  bottom: 150%; /* Position above the icon */
+  left: 50%;
+  margin-left: -108px; /* Center the tooltip */
+  opacity: 0;
+  transition:
+    opacity 0.5s,
+    transform 0.5s;
+  transform: translateY(10px);
+}
+  
+/* Tooltip Arrow */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+  
+/* Show tooltip on hover */
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+  
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+  
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  animation: bounce 0.6s ease;
+}
+
+.static-tooltip-container {
+  position: relative;
+  display: flex;
+  margin: 5px;
+}
+
+.static-tooltip {
+  visibility: hidden;
+  width: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0px 8px;
+  position: absolute;
+  bottom: 150%; /* Position above the icon */
+  left: 260px;
+  margin-left: -108px; /* Center the tooltip */
+  opacity: 1;
+  transition:
+    opacity 0.5s,
+    transform 0.5s;
+  transform: translateY(10px);
+}
+  
+/* Tooltip Arrow */
+.static-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+
+/* From Uiverse.io by shadowfax29 */ 
+/* The switch - the box around the slider */
+.theme-switch {
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.theme-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.theme-slider:before {
+  position: absolute;
+  content: "";
+  height: 1.3em;
+  width: 1.3em;
+  border-radius: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: yellow;
+  transition: .4s;
+}
+
+.theme-switch input:checked + .theme-slider:before {
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: inset 9px 0px 1px 0px white;
+}
+
+.theme-switch input:checked + .theme-slider {
+  background-color: black;
+}
+
+.theme-switch input:checked + .theme-slider:before {
+  transform: translateX(1.3em);
+}
+
+  
+.moreSettings {
+  background-color: red;
+  width: 150px;
+  height: 300px;
+  display: inline; /* inline, block */
+  float: right;
+  position: fixed;
+  left: 50%;
+  top: 125px;
+  margin-right: 15px;
+  margin-top: 5px;
+  border-radius: 8px;
+  z-index: 100;
+  transition: right 0.5s ease 0.1s;
+  box-shadow: var(--general-shadow);
+}
+
+/* Bottom */
+.bottom {
+  background-color: none;
+  color: #000000;
+  width: auto;
+  height: 40px;
+  margin-top: 45px;
+  display: flex;
+  padding: 0;
+  border-radius: 8px;
+  /* box-shadow: 0 0 5px #bebebe73, 0 0px 8px #bebebe73, 0 8px 12px #bebebe73; */
+  vertical-align: bottom;
+  justify-content: center;
+ 
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.githubButton {
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .4s;
+  cursor: pointer;
+  position: relative;
+  background-color: var(--background-color); /* Default: 1f1f1f */
+  overflow: hidden;
+  box-shadow: var(--github-shadow);
+}
+
+.githubsvgIcon {
+  transition-duration: .3s;
+}
+
+.githubsvgIcon path {
+  fill: var(--githubsvgIcon); /* Default: ffffff */
+}
+
+.githubText {
+  position: absolute;
+  color: var(--text-color); /* Default: ffffff */
+  width: 120px;
+  font-weight: 600;
+  opacity: 0;
+  transition-duration: .4s;
+}
+
+.githubButton:hover {
+  width: 110px;
+  transition-duration: .4s;
+  border-radius: 30px;
+}
+
+.githubButton:hover .githubText {
+  opacity: 1;
+  transition-duration: .4s;
+}
+
+.githubButton:hover .githubsvgIcon {
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+
+
+
+
