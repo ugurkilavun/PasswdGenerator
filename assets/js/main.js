@@ -7,12 +7,14 @@ const decreaseThePasswordRange = document.querySelector("#decreaseThePasswordRan
 const passwdSafetyInformation = document.getElementById("passwdSafetyInformation");
 
 
+// inputPasswordRange
+
 // ?
 window.onload = () => {
   setSecurityStatus(inputPasswordRange.value);
+  localStorage.getItem('length') == null ? [document.querySelector("#inputPasswordRange").value = 16, passwordRangeValue.textContent = 16] : [document.querySelector("#inputPasswordRange").value = localStorage.getItem("length"), passwordRangeValue.textContent = localStorage.getItem("length")];
   localStorage.setItem("lowerCase", true);
   localStorage.getItem("upperCase") == "true" ? document.getElementById("upperCaseCB").checked = true : document.getElementById("upperCaseCB").checked = false;
-  // localStorage.getItem("lowerCase") == "true" ? document.getElementById("lowerCaseCB").checked = true : document.getElementById("lowerCaseCB").checked = false;
   localStorage.getItem("number") == "true" ? document.getElementById("numbersCB").checked = true : document.getElementById("numbersCB").checked = false;
   localStorage.getItem("randomCharacter") == "true" ? document.getElementById("randomCharactersCB").checked = true : document.getElementById("randomCharactersCB").checked = false;
   generatePasswd();
@@ -27,17 +29,20 @@ inputPasswordRange.addEventListener("change", (event) => {
 increaseThePasswordRange.addEventListener("click", () => {
   inputPasswordRange.value++;
   passwordRangeValue.textContent = inputPasswordRange.value;
+  localStorage.setItem('length', inputPasswordRange.value);
   setSecurityStatus(inputPasswordRange.value);
 });
 
 decreaseThePasswordRange.addEventListener("click", () => {
   inputPasswordRange.value--;
   passwordRangeValue.textContent = inputPasswordRange.value;
+  localStorage.setItem('length', inputPasswordRange.value);
   setSecurityStatus(inputPasswordRange.value);
 });
 
 // Password Range Settings: Security Status
 inputPasswordRange.addEventListener('change', () => {
+  localStorage.setItem('length', inputPasswordRange.value);
   setSecurityStatus(inputPasswordRange.value);
 });
 
@@ -48,7 +53,7 @@ const setSecurityStatus = (securityValue) => {
     passwdSafetyInformation.innerHTML = "Weak";
   }
   else if (securityValue >= 7 && securityValue <= 9) {
-    passwdSafetyInformation.style.background = "#fafa8a"; /* fbfb9e,fcfcb5 */
+    passwdSafetyInformation.style.background = "#fafa8a";
     passwdSafetyInformation.innerHTML = "Good";
   }
   else if (securityValue >= 10 && securityValue <= 13) {
@@ -64,7 +69,7 @@ const setSecurityStatus = (securityValue) => {
 // -_?
 
 // *More Settings Modal 
-let moreSettingsModalToggleState = false; // Default: false == "display: none;" 
+let moreSettingsModalToggleState = false;
 const setMoreSettingsModal = () => {
   moreSettingsModalToggleState = !moreSettingsModalToggleState;
   const moreSettingsModal = document.getElementById("setMoreSettingsModal");
@@ -72,7 +77,6 @@ const setMoreSettingsModal = () => {
 
   if (moreSettingsModalToggleState) {
     moreSettingsModal.style.display = 'flex';
-    // moreSettingsButtonWrapper.style.marginLeft = "440px";
     setTimeout(() => {
       moreSettingsModal.classList.add('show');
     }, 100);
@@ -80,7 +84,6 @@ const setMoreSettingsModal = () => {
   else {
     moreSettingsModal.classList.remove('show');
     setTimeout(() => {
-      // moreSettingsButtonWrapper.style.marginLeft = "440px";
       moreSettingsModal.style.display = 'none';
     }, 500);
   }
@@ -202,7 +205,6 @@ copyPasswd.addEventListener('click', () => {
 
 
 // *More Settings
-
 
 // Theme
 document.getElementById("themeSettings").addEventListener('change', () => {
