@@ -27,8 +27,8 @@
 
 /* General Styles */
 body {
-  background-color: var(--body-background-color);/* 1. f1fafa, 2. f1f6fa, 3.#e8e8e8 */
-  color: var(--text-color); /* #333;*/
+  background-color: var(--body-background-color);
+  color: var(--text-color);
   font-family: "Arial", sans-serif;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@ body {
 }
 
 input[type="range"] {
-  accent-color: #33dddd; /* 707070, 5ac47d */
+  accent-color: #33dddd;
 }
 
 /* Styles */
@@ -49,10 +49,13 @@ input[type="range"] {
   flex-direction: column;
 }
 
-.header, .body, .bottom {
+.header,
+.body,
+.bottom {
   text-align: center;
   margin: 0px;
 }
+
 
 /* Header */
 .header {
@@ -64,7 +67,7 @@ input[type="range"] {
   border-radius: 8px;
   box-shadow: 0 0 5px #bebebe73, 0 0px 8px #bebebe73, 0 8px 12px #bebebe73;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 
 .headerItems {
@@ -74,16 +77,16 @@ input[type="range"] {
 }
 
 
-
 /* Body */
-.bodyWrapper  {
+.bodyWrapper {
   display: flex;
   flex-direction: row;
 }
 
 .body {
   background-color: var(--background-color);
-  width: auto; /* Default: 444px*/
+  width: auto;
+  /* Default: 444px*/
   height: auto;
   padding: 0px 30px;
   border-radius: 8px;
@@ -99,26 +102,23 @@ input[type="range"] {
   display: flex;
   margin-right: auto;
   margin-left: auto;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
-  /* justify-content: space-between; */ 
 }
 
 .passwdTSIWrapper {
   background-color: none;
   margin-bottom: 25px;
-  /* width: 100vh; */
   width: 80%;
   height: auto;
   display: flex;
   margin-right: auto;
   margin-left: auto;
   justify-content: center;
-  /* justify-content: space-between; */ 
 }
 
 .passwdGenGeneralWrapperCentered {
-  background-color: none; 
+  background-color: none;
   width: auto;
   height: auto;
   display: flex;
@@ -128,7 +128,7 @@ input[type="range"] {
 }
 
 .passwdGenGeneralWrapperLeftAligned {
-  background-color: none; 
+  background-color: none;
   display: flex;
   margin-left: 2px;
   align-items: center;
@@ -136,10 +136,9 @@ input[type="range"] {
 }
 
 .passwdGenBordered {
-  background-color: var(--background-color); 
+  background-color: var(--background-color);
   display: flex;
   color: none;
-  /* border: 1px solid #dadada; */
   box-shadow: var(--passwd-shadow);
   border: none;
   padding: 10px;
@@ -149,7 +148,7 @@ input[type="range"] {
 }
 
 .passwdGenBordered:hover {
-  cursor: url("../images/cursor/cursor.png"), auto; /*7,*/
+  cursor: url("../images/cursor/cursor.png"), auto;
 }
 
 
@@ -158,8 +157,8 @@ input[type="range"] {
 }
 
 .passwdGenContentWrapper {
-  width: 300px; 
-  background-color: none; 
+  width: 300px;
+  background-color: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,11 +171,11 @@ input[type="range"] {
   margin-bottom: 5px;
   flex-direction: row;
   align-items: center;
-  
+
 }
 
 .passwdGenContents {
-  background-color: none; /* f3f3f3 */
+  background-color: none;
   width: 300px;
   margin: 0px 5px 8px 5px;
   padding: 8px 10px 8px 10px;
@@ -189,7 +188,7 @@ input[type="range"] {
 }
 
 .passwdGenContentsCentered {
-  background-color: none; /* f3f3f3 */
+  background-color: none;
   width: 300px;
   display: flex;
   flex-direction: row;
@@ -219,7 +218,7 @@ input[type="range"] {
 }
 
 .passwdGenTextSafetyInformation {
-  width: 150px;/* 100%, auto */
+  width: 150px;
   background-color: #2fce52;
   color: #1d1d1d;
   font-size: 14px;
@@ -237,26 +236,26 @@ input[type="range"] {
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 0; 
+  margin: 0;
   color: inherit;
   font: inherit;
   cursor: pointer;
   width: 35px;
   height: 35px;
   border-radius: 25px;
-  background-color: var(--button-incAndDec-background); 
+  background-color: var(--button-incAndDec-background);
   border: var(--buton-incAndDec-border);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 
 .incAndDecButtonStyles:hover {
-  background-color: var(--button-incAndDec-background); 
+  background-color: var(--button-incAndDec-background);
   transform: scale(1.1);
 }
 
 
-/* From Uiverse.io by Galahhad */ 
+/* From Uiverse.io by Galahhad */
 .ui-btn {
   --width: 210px;
   --btn-default-bg: rgb(63, 63, 63);
@@ -265,17 +264,15 @@ input[type="range"] {
   --btn-hover-bg: rgb(51, 51, 51);
   --btn-transition: .5s;
   --btn-letter-spacing: .1rem;
-  --btn-animation-duration: 1.2s; /* 1.2s */
+  --btn-animation-duration: 1.2s;
   --btn-shadow-color: rgba(0, 0, 0, 0.137);
   --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
   --hover-btn-color: #FAC921;
   --default-btn-color: #fff;
   --border-radius: 8px;
   --font-size: 15px;
-  /* 👆 this field should not be empty */
   --font-weight: 600;
   --font-family: Menlo, Roboto Mono, monospace;
-  /* 👆 this field should not be empty */ 
 }
 
 /* button settings 👆 */
@@ -324,7 +321,8 @@ input[type="range"] {
   color: var(--hover-btn-color);
 }
 
-.ui-btn:hover span::before, .ui-btn:hover span::before {
+.ui-btn:hover span::before,
+.ui-btn:hover span::before {
   animation: chitchat linear both var(--btn-animation-duration);
 }
 
@@ -350,7 +348,7 @@ input[type="range"] {
   }
 
   25% {
-    content: "?{4@%$+^"; /*End Left == 8, ?{4@%$+^ : Generate   */
+    content: "?{4@%$+^";
   }
 
   30% {
@@ -358,62 +356,62 @@ input[type="range"] {
   }
 
   35% {
-    content: ";?/%&@]"; /* Number: 7 */
+    content: ";?/%&@]";
   }
 
   40% {
-    content: "#{.2@%"; /* 6 */
+    content: "#{.2@%";
   }
 
   45% {
-    content: "=.,^!}"; /* 6 */
+    content: "=.,^!}";
   }
 
   50% {
-    content: "?2@%6"; /* 5 */
+    content: "?2@%6";
   }
 
   55% {
-    content: "?{%:%"; /* 5 */
+    content: "?{%:%";
   }
 
   60% {
-    content: "4%0%"; /* 4 */
+    content: "4%0%";
     right: 0;
   }
 
   65% {
-    content: "'_0<"; /* 4 */
+    content: "'_0<";
     right: 0;
   }
 
   70% {
-    content: "{0%"; /* 3 */
+    content: "{0%";
     right: 0;
   }
 
   75% {
-    content: "]>'"; /* 3 */
+    content: "]>'";
     right: 0;
   }
 
   80% {
-    content: "6{"; /* 2 */
+    content: "6{";
     right: 0;
   }
 
   85% {
-    content: "^+"; /* 2 */
+    content: "^+";
     right: 0;
   }
 
   90% {
-    content: "9"; /* 1 */
+    content: "9";
     right: 0;
   }
 
   95% {
-    content: "."; /* 1 */
+    content: ".";
     right: 0;
   }
 
@@ -426,15 +424,15 @@ input[type="range"] {
 
 .moreSettingsButtonWrapper {
   display: flex;
-  background-color: none; 
-  height: auto; 
+  background-color: none;
+  height: auto;
   width: auto;
   padding: 3px;
   justify-content: center;
   align-items: center;
   position: fixed;
   margin-top: 300px;
-  margin-left: 446px; /* Default: 440px, Opened: 550px */
+  margin-left: 446px;
 }
 
 .moreSettingsButton {
@@ -457,32 +455,33 @@ input[type="range"] {
   fill: rgb(77, 77, 77);
   transition: all 0.3s;
 }
+
 .moreSettingsButton:hover {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
   background-color: rgb(59, 59, 59);
 }
+
 .moreSettingsButton:hover svg {
   fill: white;
 }
 
 /* More Settings: Modal */
-.bodyModalWrapper{
+.bodyModalWrapper {
   background-color: var(--background-color);
   display: none;
-  margin-left: 43px; /* -10px */
+  margin-left: 43px;
   padding: 0px 10px 20px 10px;
   margin-top: auto;
   margin-bottom: auto;
   width: 260px;
   height: 100%;
-  /* z-index: -1; */
   border-radius: 8px;
   box-shadow: var(--general-shadow);
   transform: scale(0);
   transition: transform 0.5s ease;
 }
 
-.bodyModalWrapperUL{
+.bodyModalWrapperUL {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -513,14 +512,14 @@ input[type="range"] {
   align-items: center;
 }
 
-/* From Uiverse.io by Sunandh */ 
+/* From Uiverse.io by Sunandh */
 /* Tooltip container */
 .tooltip-container {
   position: relative;
   display: inline-block;
   margin: 5px;
 }
-  
+
 /* Icon styling */
 .tooltip-icon {
   width: 18px;
@@ -530,24 +529,24 @@ input[type="range"] {
   align-items: center;
   cursor: pointer;
   transition:
-  transform 0.3s ease,
-  filter 0.3s ease;
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
 .tooltip-icon-color {
   stroke: none;
   fill: var(--text-color);
 }
-  
+
 /* SVG Animation: Rotate and scale effect */
-.tooltip-icon  svg {
+.tooltip-icon svg {
   transition: transform 0.5s ease-in-out;
 }
-  
+
 .tooltip-icon:hover svg {
   transform: rotate(360deg) scale(1.2);
 }
-  
+
 /* Tooltip styling */
 .tooltip {
   visibility: hidden;
@@ -558,16 +557,16 @@ input[type="range"] {
   border-radius: 5px;
   padding: 0px 8px;
   position: absolute;
-  bottom: 150%; /* Position above the icon */
+  bottom: 150%;
   left: 50%;
-  margin-left: -108px; /* Center the tooltip */
+  margin-left: -108px;
   opacity: 0;
   transition:
     opacity 0.5s,
     transform 0.5s;
   transform: translateY(10px);
 }
-  
+
 /* Tooltip Arrow */
 .tooltip::after {
   content: "";
@@ -579,15 +578,16 @@ input[type="range"] {
   border-style: solid;
   border-color: #333 transparent transparent transparent;
 }
-  
+
 /* Show tooltip on hover */
 .tooltip-container:hover .tooltip {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
-  
+
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -595,14 +595,16 @@ input[type="range"] {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-30px);
   }
+
   60% {
     transform: translateY(-15px);
   }
 }
-  
+
 .tooltip-container:hover .tooltip {
   visibility: visible;
   opacity: 1;
@@ -625,16 +627,16 @@ input[type="range"] {
   border-radius: 5px;
   padding: 0px 8px;
   position: absolute;
-  bottom: 150%; /* Position above the icon */
+  bottom: 150%;
   left: 260px;
-  margin-left: -108px; /* Center the tooltip */
+  margin-left: -108px;
   opacity: 1;
   transition:
     opacity 0.5s,
     transform 0.5s;
   transform: translateY(10px);
 }
-  
+
 /* Tooltip Arrow */
 .static-tooltip::after {
   content: "";
@@ -648,7 +650,7 @@ input[type="range"] {
 }
 
 
-/* From Uiverse.io by shadowfax29 */ 
+/* From Uiverse.io by shadowfax29 */
 /* The switch - the box around the slider */
 .theme-switch {
   font-size: 15px;
@@ -690,26 +692,26 @@ input[type="range"] {
   transition: .4s;
 }
 
-.theme-switch input:checked + .theme-slider:before {
+.theme-switch input:checked+.theme-slider:before {
   background-color: black;
   border-radius: 50px;
   box-shadow: inset 9px 0px 1px 0px white;
 }
 
-.theme-switch input:checked + .theme-slider {
+.theme-switch input:checked+.theme-slider {
   background-color: black;
 }
 
-.theme-switch input:checked + .theme-slider:before {
+.theme-switch input:checked+.theme-slider:before {
   transform: translateX(1.3em);
 }
 
-  
+
 .moreSettings {
   background-color: red;
   width: 150px;
   height: 300px;
-  display: inline; /* inline, block */
+  display: inline;
   float: right;
   position: fixed;
   left: 50%;
@@ -732,13 +734,12 @@ input[type="range"] {
   display: flex;
   padding: 0;
   border-radius: 8px;
-  /* box-shadow: 0 0 5px #bebebe73, 0 0px 8px #bebebe73, 0 8px 12px #bebebe73; */
   vertical-align: bottom;
   justify-content: center;
- 
+
 }
 
-/* From Uiverse.io by vinodjangid07 */ 
+/* From Uiverse.io by vinodjangid07 */
 .githubButton {
   border: none;
   border-radius: 50%;
@@ -750,7 +751,7 @@ input[type="range"] {
   transition-duration: .4s;
   cursor: pointer;
   position: relative;
-  background-color: var(--background-color); /* Default: 1f1f1f */
+  background-color: var(--background-color);
   overflow: hidden;
   box-shadow: var(--github-shadow);
 }
@@ -760,12 +761,12 @@ input[type="range"] {
 }
 
 .githubsvgIcon path {
-  fill: var(--githubsvgIcon); /* Default: ffffff */
+  fill: var(--githubsvgIcon);
 }
 
 .githubText {
   position: absolute;
-  color: var(--text-color); /* Default: ffffff */
+  color: var(--text-color);
   width: 120px;
   font-weight: 600;
   opacity: 0;
@@ -787,8 +788,3 @@ input[type="range"] {
   opacity: 0;
   transition-duration: .3s;
 }
-
-
-
-
-
